@@ -45,10 +45,10 @@ Our App does not address anyone under the age of 13. We do not knowingly collect
 
 We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.
 
-[Read our Terms of Service here](/TERMS)
-
 ## 6. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
 *   **Email:** [Email](info@starrlog.org)
 *   **GitHub:** [Starrlog-legal](https://github.com/starrlogbs-coder)
+
+[Read our Terms of Service here](/TERMS)
