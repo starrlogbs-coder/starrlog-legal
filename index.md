@@ -48,7 +48,7 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 ## 6. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
-*   **Email:** [Email](info@starrlog.org)
+*   **Email:** [info@starrlog.org](info@starrlog.org)
 *   **GitHub:** [Starrlog-legal](https://github.com/starrlogbs-coder)
 
 [Read our Terms of Service here](/TERMS)
