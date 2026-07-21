@@ -29,7 +29,7 @@ This data is aggregated, completely anonymous, and used solely to ensure server 
 The App uses third-party services that may collect information used to identify you. Please review the privacy policies of the third-party service providers used by the App:
 
 *   **Google Play Services:** Used for core Android functionality. [Privacy Policy](https://policies.google.com/privacy)
-*   **Google Play Billing:** Used to process securely in-app purchases (e.g., Lifetime Premium). We do not collect or process your credit card information; this is handled entirely by Google.
+*   **Google Play Billing:** Used to securily process in-app purchases (e.g., Lifetime Ads Free). We do not collect or process your credit card information; this is handled entirely by Google.
 *   **AdMob (Google Ads):** The free version of the App serves advertisements. AdMob may collect your device's Advertising ID, IP address, and interaction metrics to serve personalized or non-personalized ads. [Privacy Policy](https://policies.google.com/technologies/ads)
 *   **Supercell:** We interface with the official Brawl Stars API to fetch public game data. We are not affiliated with Supercell. [Supercell Privacy Policy](https://supercell.com/en/privacy-policy/)
 
@@ -48,7 +48,7 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 ## 6. Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
-*   **Email:** [info@starrlog.org](info@starrlog.org)
+*   **Email:** [info@starrlog.org](mailto:info@starrlog.org)
 *   **GitHub:** [Starrlog-legal](https://github.com/starrlogbs-coder)
 
 [Read our Terms of Service here](/TERMS)
