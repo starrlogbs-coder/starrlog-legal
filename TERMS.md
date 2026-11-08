@@ -1,7 +1,7 @@
 ---
 title: Terms of Service
 description: The terms that apply when you download or use the StarrLog app.
-last_updated: 2026-07-14
+last_updated: 2026-11-08
 ---
 
 By downloading or using the StarrLog application (the "App"), these terms will automatically apply to you. You should make sure that you read them carefully before using the App.

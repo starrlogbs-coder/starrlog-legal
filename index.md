@@ -1,7 +1,7 @@
 ---
 title: Privacy Policy
 description: What information the StarrLog app collects, how it is used, and the choices you have.
-last_updated: 2026-07-14
+last_updated: 2026-11-08
 ---
 
 Rohanito12 ("we", "us", or "our") operates the StarrLog mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App and the choices you have associated with that data.
