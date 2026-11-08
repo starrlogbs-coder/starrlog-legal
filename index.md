@@ -1,6 +1,8 @@
-# Privacy Policy for StarrLog
-
-**Last Updated:** July 14, 2026
+---
+title: Privacy Policy
+description: What information the StarrLog app collects, how it is used, and the choices you have.
+last_updated: 2026-07-14
+---
 
 Rohanito12 ("we", "us", or "our") operates the StarrLog mobile application (the "App"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our App and the choices you have associated with that data.
 
@@ -15,13 +17,15 @@ Certain data is saved strictly locally on your device to ensure the App function
 *   Your "Favorite" players and clubs.
 *   Your recent search history.
 *   Your App interface preferences (e.g., Light/Dark theme).
-**This local data never leaves your device and is not transmitted to our servers.**
+
+> **This local data never leaves your device and is not transmitted to our servers.**
 
 ### Server Logs and Analytics
 When you use the App to fetch Brawl Stars data, your requests are routed through our backend proxy servers. To monitor server health and prevent abuse, we use tools like Prometheus and Grafana. These tools may temporarily log anonymous telemetry data, including:
 *   Your device's Internet Protocol (IP) address.
 *   The date and time of your requests.
 *   The specific API endpoints you access.
+
 This data is aggregated, completely anonymous, and used solely to ensure server stability.
 
 ## 2. Third-Party Services
@@ -29,7 +33,7 @@ This data is aggregated, completely anonymous, and used solely to ensure server 
 The App uses third-party services that may collect information used to identify you. Please review the privacy policies of the third-party service providers used by the App:
 
 *   **Google Play Services:** Used for core Android functionality. [Privacy Policy](https://policies.google.com/privacy)
-*   **Google Play Billing:** Used to securily process in-app purchases (e.g., Lifetime Ads Free). We do not collect or process your credit card information; this is handled entirely by Google.
+*   **Google Play Billing:** Used to securely process in-app purchases (e.g., Lifetime Ads Free). We do not collect or process your credit card information; this is handled entirely by Google.
 *   **AdMob (Google Ads):** The free version of the App serves advertisements. AdMob may collect your device's Advertising ID, IP address, and interaction metrics to serve personalized or non-personalized ads. [Privacy Policy](https://policies.google.com/technologies/ads)
 *   **Supercell:** We interface with the official Brawl Stars API to fetch public game data. We are not affiliated with Supercell. [Supercell Privacy Policy](https://supercell.com/en/privacy-policy/)
 

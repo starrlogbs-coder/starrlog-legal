@@ -1,6 +1,8 @@
-# Terms of Service for StarrLog
-
-**Last Updated:** July 14, 2026
+---
+title: Terms of Service
+description: The terms that apply when you download or use the StarrLog app.
+last_updated: 2026-07-14
+---
 
 By downloading or using the StarrLog application (the "App"), these terms will automatically apply to you. You should make sure that you read them carefully before using the App.
 
@@ -8,8 +10,9 @@ By downloading or using the StarrLog application (the "App"), these terms will a
 By accessing and using StarrLog, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use the App.
 
 ## 2. Supercell Fan Content Policy
-StarrLog is an unofficial, third-party application designed to provide statistics and data for the mobile game Brawl Stars. 
-**This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: [www.supercell.com/fan-content-policy](https://supercell.com/fan-content-policy).**
+StarrLog is an unofficial, third-party application designed to provide statistics and data for the mobile game Brawl Stars.
+
+> **This material is unofficial and is not endorsed by Supercell. For more information see Supercell's Fan Content Policy: [www.supercell.com/fan-content-policy](https://supercell.com/fan-content-policy).**
 
 We do not own the rights to the Brawl Stars brand, logos, or game assets. All game-related intellectual property belongs to Supercell.
 

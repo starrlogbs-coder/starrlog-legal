@@ -1,3 +1,32 @@
 title: StarrLog
 description: Legal documents and policies for the StarrLog app.
-theme: jekyll-theme-minimal
+email: info@starrlog.org
+
+# No gem theme: pages use the custom layout in _layouts/default.html
+# and the stylesheet in assets/css/legal.css.
+theme: null
+plugins:
+  - jekyll-seo-tag
+
+# Links in the header and footer.
+nav:
+  - title: Privacy Policy
+    url: /
+  - title: Terms of Service
+    url: /TERMS
+
+# App icon shown next to the name in the header. It should be black artwork on a
+# transparent background; it is turned white automatically in dark mode.
+logo: /assets/logo.png
+
+# Small print at the bottom of every page (Markdown allowed).
+footer_note: >-
+  This material is unofficial and is not endorsed by Supercell. For more information see
+  Supercell's Fan Content Policy:
+  [www.supercell.com/fan-content-policy](https://supercell.com/fan-content-policy).
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

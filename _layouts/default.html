@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+    {% seo %}
+    <link rel="icon" href="{{ '/assets/icon-32.png' | relative_url }}" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/legal.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {%- assign current_url = page.url | remove: '.html' %}
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          {%- if site.logo %}
+          <img class="brand__logo" src="{{ site.logo | relative_url }}" alt="" width="36" height="36">
+          {%- endif %}
+          <span class="brand__name">{{ site.title }}</span>
+          <span class="brand__section">Legal</span>
+        </a>
+        <nav class="site-nav" aria-label="Legal documents">
+          {%- for item in site.nav %}
+          <a class="site-nav__link" href="{{ item.url | relative_url }}"{% if item.url == current_url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          {%- endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="doc-hero">
+        <div class="container">
+          <h1 class="doc-hero__title">{{ page.title }}</h1>
+          {%- if page.description %}
+          <p class="doc-hero__lead">{{ page.description }}</p>
+          {%- endif %}
+          {%- if page.last_updated %}
+          <p class="doc-hero__meta">
+            <svg class="icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 6.75h12M5.5 1.75v2.5M10.5 1.75v2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Last updated <time datetime="{{ page.last_updated | date: '%Y-%m-%d' }}">{{ page.last_updated | date: '%B %-d, %Y' }}</time></span>
+          </p>
+          {%- endif %}
+        </div>
+      </div>
+
+      <div class="container doc-layout">
+        <nav class="toc" aria-label="On this page" hidden>
+          <details class="toc__details">
+            <summary class="toc__summary">On this page</summary>
+            <ol class="toc__list"></ol>
+          </details>
+        </nav>
+        <article class="doc">
+          {{ content }}
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__row">
+          <p class="site-footer__copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+          <nav class="site-footer__nav" aria-label="Footer">
+            {%- for item in site.nav %}
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+            {%- endfor %}
+            {%- if site.email %}
+            <a href="mailto:{{ site.email }}">Contact</a>
+            {%- endif %}
+          </nav>
+        </div>
+        {%- if site.footer_note %}
+        <div class="site-footer__note">{{ site.footer_note | markdownify }}</div>
+        {%- endif %}
+      </div>
+    </footer>
+
+    <script>
+      // Builds the "On this page" list from the document's section headings
+      // and highlights the section currently being read.
+      (function () {
+        var doc = document.querySelector('.doc');
+        var toc = document.querySelector('.toc');
+        if (!doc || !toc) return;
+        var headings = Array.prototype.slice.call(doc.querySelectorAll('h2[id]'));
+        if (headings.length < 2) return;
+
+        var list = toc.querySelector('.toc__list');
+        var links = headings.map(function (heading) {
+          var text = heading.textContent.trim();
+          var numbered = text.match(/^(\d+)\.\s*(.+)$/);
+          var link = document.createElement('a');
+          link.href = '#' + heading.id;
+          if (numbered) {
+            var num = document.createElement('span');
+            num.className = 'toc__num';
+            num.textContent = numbered[1];
+            link.appendChild(num);
+            text = numbered[2];
+          }
+          var label = document.createElement('span');
+          label.textContent = text;
+          link.appendChild(label);
+          var item = document.createElement('li');
+          item.appendChild(link);
+          list.appendChild(item);
+          return link;
+        });
+        toc.hidden = false;
+
+        // Always expanded as a sidebar on wide screens; a collapsible panel on small ones.
+        var details = toc.querySelector('details');
+        var wide = window.matchMedia('(min-width: 64rem)');
+        function syncOpen() { details.open = wide.matches; }
+        syncOpen();
+        if (wide.addEventListener) wide.addEventListener('change', syncOpen);
+        else if (wide.addListener) wide.addListener(syncOpen);
+        list.addEventListener('click', function (event) {
+          if (!wide.matches && event.target.closest('a')) details.open = false;
+        });
+
+        var ticking = false;
+        function highlight() {
+          ticking = false;
+          var active = -1;
+          for (var i = 0; i < headings.length; i++) {
+            if (headings[i].getBoundingClientRect().top > 120) break;
+            active = i;
+          }
+          var root = document.documentElement;
+          if (window.scrollY > 0 && window.innerHeight + window.scrollY >= root.scrollHeight - 4) {
+            active = headings.length - 1;
+          }
+          links.forEach(function (link, i) {
+            link.classList.toggle('is-active', i === active);
+            if (i === active) link.setAttribute('aria-current', 'true');
+            else link.removeAttribute('aria-current');
+          });
+        }
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            ticking = true;
+            window.requestAnimationFrame(highlight);
+          }
+        }, { passive: true });
+        highlight();
+      })();
+    </script>
+  </body>
+</html>
